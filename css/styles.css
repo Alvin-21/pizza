@@ -6,3 +6,9 @@
     padding-top: 15px;
     padding-bottom: 30px;
 }
+
+.underline {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
