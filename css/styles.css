@@ -44,3 +44,7 @@
 .street, .city, .county {
     padding-bottom: 20px;
 }
+
+.uppercase {
+    text-transform: uppercase;
+}
