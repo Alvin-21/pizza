@@ -32,3 +32,15 @@
 .inline {
     display: inline;
 }
+
+.city label {
+    padding-right: 22px;
+}
+
+.street label {
+    padding-right: 8px;
+}
+
+.street, .city, .county {
+    padding-bottom: 20px;
+}
