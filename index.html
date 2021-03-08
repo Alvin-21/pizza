@@ -20,22 +20,26 @@
                 <p>Please be free to place your order. Thank You.</p>
             </header>
             <main>
-                <form>
+                <form class="form-control">
                     <section class="padding">
                         <p>Choose the size of the pizza you want:</p>
-                        <input type="radio" id="small" name="size" value="small">
-                        <label for="small">Small - Ksh. 400</label>
-                        <br>
-                        <input type="radio" id="medium" name="size" value="medium">
-                        <label for="medium">Medium - Ksh. 700</label>
-                        <br>
-                        <input type="radio" id="large" name="size" value="large">
-                        <label for="large">Large - Ksh. 1000</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="small" name="size" value="small">
+                            <label class="form-check-label" for="small">Small - Ksh. 400</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="medium" name="size" value="medium">
+                            <label class="form-check-label" for="medium">Medium - Ksh. 700</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="large" name="size" value="large">
+                            <label class="form-check-label" for="large">Large - Ksh. 1000</label>
+                        </div>
                     </section>
             
-                    <section class="padding">
+                    <section class="padding form-group">
                         <label>Which type of crust would you prefer:</label>
-                        <select name="crust" id="crust">
+                        <select class="form-control" name="crust" id="crust">
                             <option value="classic crust">Classic Crust</option>
                             <option value="cheesy crust">Cheesy Crust</option>
                             <option value="thin n crispy">Thin n Crispy</option>
@@ -46,7 +50,7 @@
             
                     <section>
                         <p>Please select your toppings:</p>
-                        <div class="center">
+                        <div class="center form-check">
                             <div class="row">
                                 <figure class="col-md-4">
                                     <img src="images/tomatoes.webp" alt="Tomatoes">
@@ -123,31 +127,31 @@
                     <button class="margin">Place Order</button>
                     <br>
                     <button>Add more pizzas</button>
-                    <section class="delivery">
+                    <section class="delivery margin">
                         <p>Would you like your order(s) to be delivered?</p>
-                        <div class="inline">
-                            <input type="radio" id="yes" name="delivery" value="yes">
-                            <label for="yes">Yes</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="yes" name="delivery" value="yes">
+                            <label class="form-check-label" for="yes">Yes</label>
                         </div>
-                        <div class="inline delivery-padding">
-                            <input type="radio" id="no" name="delivery" value="no">
-                            <label for="no">No</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="no" name="delivery" value="no">
+                            <label class="form-check-label" for="no">No</label>
                         </div>
                     </section>
             
                     <section>
                         <p>Please enter delivery location</p>
-                        <div class="street">
+                        <div class="form-group">
                             <label for="street">Street</label>
-                            <input type="text" id="street" name="street">
+                            <input class="form-control" type="text" id="street" name="street">
                         </div>
-                        <div class="city">
+                        <div class="form-group">
                             <label for="city">City</label>
-                            <input type="text" id="city" name="city">
+                            <input class="form-control" type="text" id="city" name="city">
                         </div>
-                        <div class="county">
+                        <div class="form-group">
                             <label for="county">County</label>
-                            <input type="text" id="county" name="county">
+                            <input class="form-control" type="text" id="county" name="county">
                         </div>
                     </section>
                     <button class="margin">Checkout</button>
