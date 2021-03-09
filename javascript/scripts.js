@@ -42,5 +42,12 @@ $(document).ready(function(){
             return pizzaSize + crust + totalTopping;
         }
         totalPrice();
+
+        // User Interface
+        $("#order").show();
+        $("#size-price").append(sizePrice);
+        $("#crust-price").append(crustPrice);
+        $("#topping-price").append(totalToppingPrice);
+        $("#total-price").append(totalPrice());
     });
 });

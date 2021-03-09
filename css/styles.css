@@ -48,3 +48,11 @@
 .uppercase {
     text-transform: uppercase;
 }
+
+.hide {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
