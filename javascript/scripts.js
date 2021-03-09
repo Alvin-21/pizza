@@ -50,4 +50,10 @@ $(document).ready(function(){
         $("#topping-price").append(totalToppingPrice);
         $("#total-price").append(totalPrice());
     });
+
+    $("form #add").click(function(e) {
+        e.preventDefault();
+        document.forms[0].reset();
+        $("#order").hide();
+    });
 });
