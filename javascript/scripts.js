@@ -68,6 +68,14 @@ $(document).ready(function(){
     $("form #add").click(function(e) {
         e.preventDefault();
         document.forms[0].reset();
+        $("#size-price").remove();
+        $("#crust-price").remove();
+        $("#topping-price").remove();
+        $("#total-price").remove();
+        $("#order").append('<p id="size-price">Price of the size of pizza = </p>');
+        $("#order").append('<p id="crust-price">Price of the crust = </p>');
+        $("#order").append('<p id="topping-price">Price of the total toppings = </p>');
+        $("#order").append('<p id="total-price">Total Price for the order = </p>');
         $("#order").hide();
         
     });
