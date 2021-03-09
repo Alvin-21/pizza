@@ -50,6 +50,7 @@ $(document).ready(function(){
             this.sizeAmount = sizeAmount;
             this.crustAmount = crustAmount;
             this.totalToppingAmount = totalToppingAmount;
+            this.totalAmount = sizeAmount + crustAmount + totalToppingAmount;
         }
         
         
@@ -88,8 +89,30 @@ $(document).ready(function(){
     $("#checkout").click(function (e) {
         e.preventDefault();
         var delivered = $("input[type='radio'][name='delivery']:checked").val();
+        var delivery = 100;
+        var grandTotal = 0;
         if (delivered == "yes") {
             alert("Your order will be delivered to your location. 😌");
+            $("#summary").append('<p>Delivery fee = 100</p>')
+            grandTotal += delivery;
         }
+
+        orders.forEach(function(order) {
+            $("#summary").append('<span class="order-number"></span>');
+            $(".order-number").last().append("Order " + order.orderNumber);
+            $("#summary").append('<p class="size-amount">Price of the size of pizza = </p>')
+            $(".size-amount").last().append(order.sizeAmount);
+            $("#summary").append('<p class="crust-amount">Price of the crust = </p>')
+            $(".crust-amount").last().append(order.crustAmount);
+            $("#summary").append('<p class="toppings-amount">Price of the total toppings = </p>')
+            $(".toppings-amount").last().append(order.totalToppingAmount);
+        });
+
+        orders.forEach(function(order) {
+            grandTotal += order.totalAmount;
+        });
+        
+        $("#summary").append('<p id="grand">The Grand Total = </p>');
+        $("#grand").append(grandTotal);
     });
 });
