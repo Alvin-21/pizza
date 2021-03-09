@@ -55,5 +55,19 @@ $(document).ready(function(){
         e.preventDefault();
         document.forms[0].reset();
         $("#order").hide();
+        
+    });
+    
+    $("#yes").click(function() {
+        alert("The delivery fee is Ksh. 100");
+        $("#location").show();
+    });
+
+    $("#checkout").click(function (e) {
+        e.preventDefault();
+        var delivered = $("input[type='radio'][name='delivery']:checked").val();
+        if (delivered == "yes") {
+            alert("Your order will be delivered to your location. 😌");
+        }
     });
 });
