@@ -10,7 +10,6 @@ $(document).ready(function(){
                 var toppings = [];
                 $("input[type='checkbox'][name='toppings']:checked").each(function (topping) {
                     toppings[topping] = 20;
-                    // console.log(toppings[topping]);
                 });
                 break;
             
@@ -18,7 +17,6 @@ $(document).ready(function(){
                 var toppings = [];
                 $("input[type='checkbox'][name='toppings']:checked").each(function (topping) {
                     toppings[topping] = 40;
-                    // console.log(toppings[topping]);
                 });
                 break;
             
@@ -26,7 +24,6 @@ $(document).ready(function(){
                 var toppings = [];
                 $("input[type='checkbox'][name='toppings']:checked").each(function (topping) {
                     toppings[topping] = 60;
-                    // console.log(toppings[topping]);
                 });
                 break;
         
@@ -34,6 +31,16 @@ $(document).ready(function(){
                 break;
         }
 
-        // console.log(toppings[0]);
+        var totalToppingPrice = 0;
+        toppings.forEach(function(topping) {
+            totalToppingPrice += topping;
+        })
+        function totalPrice(pizzaSize, crust, totalTopping) {
+            pizzaSize = sizePrice;
+            crust = crustPrice;
+            totalTopping = totalToppingPrice;
+            return pizzaSize + crust + totalTopping;
+        }
+        totalPrice();
     });
 });
