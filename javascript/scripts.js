@@ -4,6 +4,7 @@ $(document).ready(function(){
     var orderId = 1;
     $("form #place-order").click(function(e){
         e.preventDefault();
+        $("#order").show();
         var sizePrice = parseInt($("input[type='radio'][name='size']:checked").val());
         var crustPrice = parseInt($("#crust").val());
         
@@ -88,6 +89,7 @@ $(document).ready(function(){
 
     $("#checkout").click(function (e) {
         e.preventDefault();
+        $("#summary").show();
         var delivered = $("input[type='radio'][name='delivery']:checked").val();
         var delivery = 100;
         var grandTotal = 0;
@@ -114,5 +116,22 @@ $(document).ready(function(){
         
         $("#summary").append('<p id="grand">The Grand Total = </p>');
         $("#grand").append(grandTotal);
+    });
+
+    $("#confirm-checkout").click(function(e) {
+        e.preventDefault();
+        alert("WE ARE VERY HAPPY YOU DECIDED TO PLACE YOUR ORDER WITH YSL PIZZERIA 😁🍕💚");
+        document.forms[0].reset();
+        $("#size-price").remove();
+        $("#crust-price").remove();
+        $("#topping-price").remove();
+        $("#total-price").remove();
+        $("#order").append('<p id="size-price">Price of the size of pizza = </p>');
+        $("#order").append('<p id="crust-price">Price of the crust = </p>');
+        $("#order").append('<p id="topping-price">Price of the total toppings = </p>');
+        $("#order").append('<p id="total-price">Total Price for the order = </p>');
+        $("#order").hide();
+        $("#summary").hide();
+        $("#location").hide();
     });
 });
