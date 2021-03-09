@@ -1,5 +1,7 @@
 // Business Logic
 $(document).ready(function(){
+    var orders = [];
+    var orderId = 1;
     $("form #place-order").click(function(e){
         e.preventDefault();
         var sizePrice = parseInt($("input[type='radio'][name='size']:checked").val());
@@ -43,6 +45,18 @@ $(document).ready(function(){
         }
         totalPrice();
 
+        function Pizza(orderNumber,sizeAmount, crustAmount, totalToppingAmount) {
+            this.orderNumber = orderNumber;
+            this.sizeAmount = sizeAmount;
+            this.crustAmount = crustAmount;
+            this.totalToppingAmount = totalToppingAmount;
+        }
+        
+        
+        var pizza = new Pizza(orderId, sizePrice, crustPrice, totalToppingPrice);
+        orders.push(pizza);
+        console.log(orders);
+        orderId += 1;
         // User Interface
         $("#order").show();
         $("#size-price").append(sizePrice);
