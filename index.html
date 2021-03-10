@@ -14,14 +14,14 @@
     <body>
         <div class="container">
             <header>
-                <h1 class="center title">YSL PIZZERIA</h1>
-                <h3 class="underline">WARM WELCOME TO THE WORLD 😁</h3>
-                <P>We are glad you have arrived at the online destination of YSL Pizzeria. YAY!! 🥳</P>
-                <p>Please be free to place your order. Thank You.</p>
+                <h1 class="center title underline">YSL PIZZERIA</h1>
+                <h3 class="underline spacing">WARM WELCOME TO THE WORLD 😁</h3>
+                <P class="spacing">We are glad you have arrived at the online destination of YSL Pizzeria. YAY!! 🥳</P>
+                <p class="spacing">Please be free to place your order. Thank You.</p>
             </header>
             <main>
                 <form class="form-control">
-                    <section class="padding">
+                    <section class="padding pizza-size">
                         <p>Choose the size of the pizza you want:</p>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" id="small" name="size" value="400">
@@ -37,7 +37,7 @@
                         </div>
                     </section>
             
-                    <section class="padding form-group">
+                    <section class="padding form-group crust">
                         <label>Which type of crust would you prefer:</label>
                         <select class="form-control" name="crust" id="crust">
                             <option value="100">Classic Crust - Ksh. 100</option>
@@ -48,8 +48,8 @@
                         </select>
                     </section>
             
-                    <section>
-                        <p>Please select your toppings (For small, toppings are Ksh. 20 each. For medium, toppings are Ksh. 40 each. For large, toppings are Ksh. 60 each.):</p>
+                    <section class="toppings">
+                        <p class="spacing">Please select your toppings (For small, toppings are Ksh. 20 each. For medium, toppings are Ksh. 40 each. For large, toppings are Ksh. 60 each.):</p>
                         <div class="center form-check">
                             <div class="row">
                                 <figure class="col-md-4">
@@ -125,14 +125,14 @@
                         </div>
                     </section>
                     <button class="margin btn btn-dark btn-block btn-lg uppercase" id="place-order">Place Order</button>
-                    <section id="order" class="hide bold">
+                    <section id="order" class="hide bold order-summary">
                         <p id="size-price">Price of the size of pizza = </p>
                         <p id="crust-price">Price of the crust = </p>
                         <p id="topping-price">Price of the total toppings = </p>
                         <p id="total-price">Total Price for the order = </p>
                     </section>
-                    <button class="btn btn-dark btn-block btn-lg uppercase" id="add">Add more pizzas</button>
-                    <section class="delivery margin">
+                    <button class="margin btn btn-dark btn-block btn-lg uppercase" id="add">Add more pizzas</button>
+                    <section class="delivery-padding  delivery">
                         <p>Would you like your order(s) to be delivered?</p>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="yes" name="delivery" value="yes">
@@ -144,7 +144,7 @@
                         </div>
                     </section>
             
-                    <section id="location" class="hide">
+                    <section id="location" class="hide delivery">
                         <p>Please enter delivery location</p>
                         <div class="form-group">
                             <label for="street">Street</label>
@@ -160,7 +160,7 @@
                         </div>
                     </section>
                     <button class="margin btn btn-dark btn-block btn-lg uppercase" id="checkout">Checkout</button>
-                    <section id="summary" class="bold">
+                    <section id="summary" class="bold checkout-summary">
 
                     </section>
                     <button type="submit" class="btn btn-dark btn-block btn-lg uppercase" id="confirm-checkout">Confirm Checkout</button>

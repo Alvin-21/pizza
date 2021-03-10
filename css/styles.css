@@ -21,7 +21,7 @@
     margin-bottom: 30px;
 }
 
-.delivery {
+.delivery-padding {
      padding-top: 25px;
 }
 
@@ -55,4 +55,35 @@
 
 .bold {
     font-weight: bold;
+}
+
+body {
+    background-color: rgb(132, 201, 28);
+}
+
+header {
+    background-color: black;
+    color: rgb(201, 206, 194);
+}
+
+.pizza-size, .crust, .order-summary {
+    color: black;
+}
+
+.toppings {
+    background-color: black;
+    color: rgb(201, 206, 194);
+}
+
+.delivery {
+    background-color: black;
+    color: rgb(201, 206, 194);
+}
+
+.checkout-summary {
+    color: black;
+}
+
+.spacing {
+    padding: 10px;
 }
