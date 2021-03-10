@@ -133,5 +133,6 @@ $(document).ready(function(){
         $("#order").hide();
         $("#summary").hide();
         $("#location").hide();
+        window.location.reload(true);
     });
 });
